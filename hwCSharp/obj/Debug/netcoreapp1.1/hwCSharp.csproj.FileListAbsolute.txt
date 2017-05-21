@@ -6,3 +6,11 @@
 /home/sherlock/code/github/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.AssemblyInfo.cs
 /home/sherlock/code/github/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.dll
 /home/sherlock/code/github/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.pdb
+/home/sujk2k/code/hello-world/hwCSharp/bin/Debug/netcoreapp1.1/hwCSharp.deps.json
+/home/sujk2k/code/hello-world/hwCSharp/bin/Debug/netcoreapp1.1/hwCSharp.runtimeconfig.json
+/home/sujk2k/code/hello-world/hwCSharp/bin/Debug/netcoreapp1.1/hwCSharp.runtimeconfig.dev.json
+/home/sujk2k/code/hello-world/hwCSharp/bin/Debug/netcoreapp1.1/hwCSharp.dll
+/home/sujk2k/code/hello-world/hwCSharp/bin/Debug/netcoreapp1.1/hwCSharp.pdb
+/home/sujk2k/code/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.AssemblyInfo.cs
+/home/sujk2k/code/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.dll
+/home/sujk2k/code/hello-world/hwCSharp/obj/Debug/netcoreapp1.1/hwCSharp.pdb
