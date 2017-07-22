@@ -1,0 +1,5 @@
+Data Points - On-the-Fly SQL Servers with Docker
+https://msdn.microsoft.com/en-us/magazine/mt784660
+
+Data Points - Visual Studio Code: Create a Database IDE with MSSQL Extension
+https://msdn.microsoft.com/en-us/magazine/mt809115.aspx
