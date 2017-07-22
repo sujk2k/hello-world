@@ -1,3 +1,7 @@
+-- start docker container for ms sql
+-- ./sqlcmd -S localhost -U sa  -P Passw0rdD
+
+-- local mssql docker connection string
 /*
 "mssql.connections": [
         {
