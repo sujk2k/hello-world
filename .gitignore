@@ -1,4 +1,8 @@
 .vs
-/hwCSharp/obj
-/hwWPFApp/hwWPFApp/bin/Debug
-/hwWPFApp/hwWPFApp/obj/Debug
+obj
+bin
+*.suo
+target
+out
+*/.idea/libraries
+*/.idea/workspace.xml
