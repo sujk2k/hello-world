@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://hwWebServiceCXF.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="HelloWorldImplService" targetNamespace="http://hwWebServiceCXF.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://hwWebServiceCXF.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="addMyTwoNumbers" type="tns:addMyTwoNumbers" />
+      <xs:element name="addMyTwoNumbersResponse" type="tns:addMyTwoNumbersResponse" />
+      <xs:element name="sayHi" type="tns:sayHi" />
+      <xs:element name="sayHiResponse" type="tns:sayHiResponse" />
+      <xs:complexType name="sayHi">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHiResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="addMyTwoNumbers">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int" />
+          <xs:element name="arg1" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="addMyTwoNumbersResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="sayHiResponse">
+    <wsdl:part name="parameters" element="tns:sayHiResponse" />
+  </wsdl:message>
+  <wsdl:message name="sayHi">
+    <wsdl:part name="parameters" element="tns:sayHi" />
+  </wsdl:message>
+  <wsdl:message name="addMyTwoNumbersResponse">
+    <wsdl:part name="parameters" element="tns:addMyTwoNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="addMyTwoNumbers">
+    <wsdl:part name="parameters" element="tns:addMyTwoNumbers" />
+  </wsdl:message>
+  <wsdl:portType name="HelloWorld">
+    <wsdl:operation name="sayHi">
+      <wsdl:input name="sayHi" message="tns:sayHi" />
+      <wsdl:output name="sayHiResponse" message="tns:sayHiResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addMyTwoNumbers">
+      <wsdl:input name="addMyTwoNumbers" message="tns:addMyTwoNumbers" />
+      <wsdl:output name="addMyTwoNumbersResponse" message="tns:addMyTwoNumbersResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloWorldImplServiceSoapBinding" type="tns:HelloWorld">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sayHi">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="sayHi">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sayHiResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addMyTwoNumbers">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="addMyTwoNumbers">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addMyTwoNumbersResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloWorldImplService">
+    <wsdl:port name="HelloWorldImplPort" binding="tns:HelloWorldImplServiceSoapBinding">
+      <soap:address location="http://sujk2k:8080/CXFWebService-1.0-SNAPSHOT/HelloWorld" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
