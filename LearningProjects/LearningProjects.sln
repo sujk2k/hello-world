@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFGettingStartedHost", "WC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFGettingStartedClient", "WCFGettingStartedClient\WCFGettingStartedClient.csproj", "{849C2F06-7959-460E-990C-0E0CC9D5116C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammingFundamentals", "ProgrammingFundamentals\ProgrammingFundamentals.csproj", "{E9C562B1-C7BE-4780-B743-9177BBB031B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{849C2F06-7959-460E-990C-0E0CC9D5116C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849C2F06-7959-460E-990C-0E0CC9D5116C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849C2F06-7959-460E-990C-0E0CC9D5116C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C562B1-C7BE-4780-B743-9177BBB031B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C562B1-C7BE-4780-B743-9177BBB031B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C562B1-C7BE-4780-B743-9177BBB031B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C562B1-C7BE-4780-B743-9177BBB031B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
