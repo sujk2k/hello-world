@@ -1,0 +1,12 @@
+{
+  "name": "fun-with-node",
+  "version": "0.0.0",
+  "description": "FunWithNode",
+  "main": "app.js",
+  "author": {
+    "name": "sujk2k"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
