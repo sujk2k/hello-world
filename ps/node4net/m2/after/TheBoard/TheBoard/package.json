@@ -1,0 +1,13 @@
+{
+  "name": "the-board",
+  "version": "0.1.0",
+  "description": "A message board based on sticky notes",
+  "main": "server.js",
+  "author": {
+    "name": "sujk2k"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "underscore": "^1.8.3"
+  }
+}
