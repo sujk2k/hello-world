@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
+import java.util.List;
 
 public class FindBeerActivity extends Activity {
 
@@ -15,7 +16,9 @@ public class FindBeerActivity extends Activity {
     }
 
     // called when button gets clicked
-    public void onClickFindBeer(View view){
+    public void onClickFindBeer(View view) {
+        BeerExpert expert = new BeerExpert();
+
         // get reference to the textView
         TextView brands = (TextView) findViewById(R.id.brands);
 
@@ -25,7 +28,15 @@ public class FindBeerActivity extends Activity {
         // get selected item in the spinner
         String beerType = String.valueOf(colors.getSelectedItem());
 
-        // display the selected item
-        brands.setText(beerType);
+        // get recommended beers from BeerExpert
+        List<String> recommendedBeers = expert.getBrands(beerType);
+
+        StringBuilder brandsFormatted = new StringBuilder();
+        for (String brand : recommendedBeers) {
+            brandsFormatted.append(brand).append("\n");
+        }
+
+        // display in textview
+        brands.setText(brandsFormatted);
     }
 }
