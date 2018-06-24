@@ -48,4 +48,22 @@ public class CreateMessageActivity extends Activity {
         // start another activity
         startActivity(intent);
     }
+
+    public void onSendToChooser(View view) {
+        // get EditText control
+        EditText editText = (EditText) findViewById(R.id.message);
+
+        // get value from EditText control
+        String messageText = editText.getText().toString();
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, messageText);
+
+        // Chooser intent is used to always display choice of intents matching respective actions
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+
+        startActivity(chosenIntent);
+    }
 }

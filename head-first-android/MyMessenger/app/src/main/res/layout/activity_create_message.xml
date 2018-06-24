@@ -33,4 +33,12 @@
             android:onClick="onSendMessageImplicit"
             android:text="@string/sendImplicit"/>
 
+    <Button
+        android:id="@+id/sendToChooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onSendToChooser"
+        android:text="@string/chooserIntent"/>
+
 </LinearLayout>
