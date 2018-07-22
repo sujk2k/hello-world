@@ -4,3 +4,11 @@ Ubuntu tricks and notes
 xinput list
 xinput list-props "SynPS/2 Synaptics TouchPad" | grep -i finger
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 50 90 255
+
+2. How to access onedrive in ubuntu
+https://www.addictivetips.com/ubuntu-linux-tips/access-microsoft-onedrive-on-linux/
+
+- using gnome
+https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
+
+3. 
