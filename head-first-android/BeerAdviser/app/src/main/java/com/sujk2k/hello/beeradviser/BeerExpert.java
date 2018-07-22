@@ -13,6 +13,10 @@ public class BeerExpert {
             brands.add("Jail Pail Ale");
             brands.add("Gout Stout");
         }
+        else if (color.equals("dark")){
+            brands.add("Polygamy Nitro Porter");
+            brands.add("Cutthroat Porter");
+        }
         else {
             brands.add("random1");
             brands.add("random2");
