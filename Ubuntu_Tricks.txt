@@ -11,4 +11,5 @@ https://www.addictivetips.com/ubuntu-linux-tips/access-microsoft-onedrive-on-lin
 - using gnome
 https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
 
-3. 
+3. Install citrix receiver on ubuntu
+https://help.ubuntu.com/community/CitrixICAClientHowTo
