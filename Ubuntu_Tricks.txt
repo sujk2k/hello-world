@@ -13,3 +13,19 @@ https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
 
 3. Install citrix receiver on ubuntu
 https://help.ubuntu.com/community/CitrixICAClientHowTo
+
+4. How to enable Wifi after system suspend (16.04 bug)
+- sudo nano /lib/systemd/system-sleep/wififix
+-- Save below script in this file
+-------------------
+#!/bin/sh
+
+set -e
+
+if [ "$2" = "suspend" ] || [ "$2" = "hybrid-sleep" ]; then
+    case "$1" in
+        pre) true ;;
+        post) sleep 1 && service network-manager restart ;;
+    esac
+fi
+--------------------
