@@ -9,6 +9,7 @@ public class BeerExpert {
         if (color.equals("amber")){
             brands.add("Jack Amber");
             brands.add("Red Moose");
+            brands.add("Amberbock");
         } else if (color.equals("brown")) {
             brands.add("Jail Pail Ale");
             brands.add("Gout Stout");
