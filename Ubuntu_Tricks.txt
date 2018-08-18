@@ -29,3 +29,7 @@ if [ "$2" = "suspend" ] || [ "$2" = "hybrid-sleep" ]; then
     esac
 fi
 --------------------
+
+5. Linux+Windows dual boot time fix
+https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
+run in console: timedatectl set-local-rtc 1 --adjust-system-clock
