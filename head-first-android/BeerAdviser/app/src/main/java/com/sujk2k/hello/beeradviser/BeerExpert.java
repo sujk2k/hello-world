@@ -16,7 +16,7 @@ public class BeerExpert {
         }
         else if (color.equals("dark")){
             brands.add("Polygamy Nitro Porter");
-            brands.add("Cutthroat Porter");
+            brands.add("Cut-throat Porter");
         }
         else if (color.equals("light")){
             brands.add("Bud Light");
