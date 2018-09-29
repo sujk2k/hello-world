@@ -15,6 +15,14 @@ public class FindBeerActivity extends Activity {
         setContentView(R.layout.activity_find_beer);
     }
 
+    @Override
+    protected  void onStart(){
+        super.onStart();
+
+        // display values on first launch
+        onClickFindBeer(null);
+    }
+
     // called when button gets clicked
     public void onClickFindBeer(View view) {
         BeerExpert expert = new BeerExpert();
