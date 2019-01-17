@@ -13,3 +13,5 @@ out
 node_modules
 */node_modules
 */node_modules/
+.settings
+.vscode
