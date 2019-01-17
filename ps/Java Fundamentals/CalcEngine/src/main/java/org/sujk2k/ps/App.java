@@ -22,5 +22,29 @@ public class App
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
+
+        System.out.println("Using method overloading");
+        double leftDouble = 9.0d;
+        double rightDouble = 4.0;
+
+        MathEquation equationOverload = new MathEquation('d');
+        equationOverload.execute(leftDouble, rightDouble);
+        System.out.println(equationOverload.getResult());
+
+        System.out.println("Using integers execute overload");
+        int leftInt = 9;
+        int rightInt = 4;
+
+        MathEquation equationOverload2 = new MathEquation('d');
+        equationOverload2.execute(leftInt, rightInt);
+        System.out.println(equationOverload2.getResult());
+
+        System.out.println("Using one double and one int execute overload");
+        double leftDouble2 = 9;
+        int rightInt2 = 4;
+
+        MathEquation equationOverload3 = new MathEquation('d');
+        equationOverload3.execute(leftDouble2, rightInt2);
+        System.out.println(equationOverload3.getResult());
     }
 }

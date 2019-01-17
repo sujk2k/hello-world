@@ -28,6 +28,26 @@ public class MathEquation {
     public void setOpCode(char opCode) { this.opCode = opCode; }
     public double getResult() { return this.result; }
 
+    // Overload 1
+    // In case one int and one double is passed, system will pickup below overload since it matches the most
+    public void execute(double leftVal, double rightVal){
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+
+        execute();
+    }
+
+    // Overload 2
+    public void execute(int leftInt, int rightInt){
+        this.leftVal = leftInt;
+        this.rightVal = rightInt;
+
+        execute();
+
+        // to truncate double result to integer
+        result = (int) result;
+    }
+
     public void execute(){
         switch (opCode) {
             case 'a':
