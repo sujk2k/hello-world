@@ -25,7 +25,7 @@ public class App
 
         System.out.println("Using method overloading");
         double leftDouble = 9.0d;
-        double rightDouble = 4.0;
+        double rightDouble = 4.0d;
 
         MathEquation equationOverload = new MathEquation('d');
         equationOverload.execute(leftDouble, rightDouble);
@@ -39,6 +39,7 @@ public class App
         equationOverload2.execute(leftInt, rightInt);
         System.out.println(equationOverload2.getResult());
 
+        // Below will call execute(double, double) method overload as execute(double, int) overload is not available
         System.out.println("Using one double and one int execute overload");
         double leftDouble2 = 9;
         int rightInt2 = 4;

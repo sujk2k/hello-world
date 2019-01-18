@@ -6,6 +6,7 @@ public class MathEquation {
     private char opCode;
     private double result;
 
+    // Default constructor - to create empty object
     public MathEquation(){
 
     }
@@ -14,8 +15,11 @@ public class MathEquation {
         this.opCode = opCode;
     }
 
+    // Overloaded constructor
     public MathEquation(char opCode, double leftVal, double rightVal){
+        // constructor chaining - calling one constructor from another
         this(opCode);
+
         this.leftVal = leftVal;
         this.rightVal = rightVal;
     }
