@@ -33,3 +33,8 @@ fi
 5. Linux+Windows dual boot time fix
 https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
 run in console: timedatectl set-local-rtc 1 --adjust-system-clock
+
+6. Disable default intel wifi adapter
+sudo modprobe -r iwlwifi
+OR to disable and blacklist permanently
+sudo modprobe -r iwlwifi; sudo modprobe -b iwlwifi
