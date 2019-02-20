@@ -42,3 +42,8 @@ sudo modprobe -r iwlwifi; sudo modprobe -b iwlwifi
 7. Install and configure JDK
 https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
 
+8. Create shortcuts on Ubuntu desktop
+https://askubuntu.com/questions/141229/how-to-add-a-shell-script-to-launcher-as-shortcut
+sudo apt-get install --no-install-recommends gnome-panel
+gnome-desktop-item-edit ~/Desktop/ --create-new
+
