@@ -38,3 +38,7 @@ run in console: timedatectl set-local-rtc 1 --adjust-system-clock
 sudo modprobe -r iwlwifi
 OR to disable and blacklist permanently
 sudo modprobe -r iwlwifi; sudo modprobe -b iwlwifi
+
+7. Install and configure JDK
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
+
