@@ -26,6 +26,7 @@ public class FirstSpringDemoApplication {
 		// get binary searh bean from application context
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 
+		// call binarySearch instance method
 		int result = binarySearch.bimarySearch(new int[]{1, 2, 3}, 3);
 		System.out.println(result);
 	}
