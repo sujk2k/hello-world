@@ -7,16 +7,25 @@ import org.springframework.stereotype.Component;
 @Component
 public class BinarySearchImpl {
 
-    // By using autowired annotation, we tell spring that BinarySearchImpl requires sortAlgorithm to work
+    // By using auto-wired annotation, we tell spring that BinarySearchImpl requires sortAlgorithm to work
+    // Injection happens even if no setter or constructor injection is explicitly specified
     @Autowired
     SortAlgorithm sortAlgorithm;
 
-    public BinarySearchImpl (SortAlgorithm sortAlgorithm){
+    // Setter injection
+    /*public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+        this.sortAlgorithm = sortAlgorithm;
+    }*/
+
+    // Constructor injection
+    // Use constructor injection, then use constructor injection (before spring boot)
+    // spring.debug.log -> Autowiring by type from bean name 'binarySearchImpl' via constructor to bean named 'quickSortAlgorithm'
+    /*public BinarySearchImpl (SortAlgorithm sortAlgorithm){
         super();
         this.sortAlgorithm = sortAlgorithm;
-    }
+    }*/
 
-    public int bimarySearch(int[] arrayToSort, int numberToSearch){
+    public int binarySearch(int[] arrayToSort, int numberToSearch){
         // Sort array
         int[] sortedNumbers = sortAlgorithm.sort(arrayToSort);
         System.out.println(sortAlgorithm);

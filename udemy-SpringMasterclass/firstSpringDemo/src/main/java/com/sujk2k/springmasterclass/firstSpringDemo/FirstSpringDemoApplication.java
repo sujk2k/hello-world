@@ -23,11 +23,11 @@ public class FirstSpringDemoApplication {
 		// All beans are maintained in spring application context
 		ApplicationContext applicationContext = SpringApplication.run(FirstSpringDemoApplication.class, args);
 
-		// get binary searh bean from application context
+		// get binary search bean from application context
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 
 		// call binarySearch instance method
-		int result = binarySearch.bimarySearch(new int[]{1, 2, 3}, 3);
+		int result = binarySearch.binarySearch(new int[]{1, 2, 3}, 3);
 		System.out.println(result);
 	}
 }
