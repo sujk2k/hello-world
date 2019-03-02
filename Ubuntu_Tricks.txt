@@ -14,6 +14,18 @@ https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
 3. Install citrix receiver on ubuntu
 https://help.ubuntu.com/community/CitrixICAClientHowTo
 
+-- Trick for Ubuntu 18.04+ since Citrix client won't get installed successfully
+a. sudo dpkg -i ~/Downloads/icaclient_19.1.0.9_amd64.deb
+b. sudo dpkg --add-architecture i386
+c. sudo apt-get update
+d. sudo apt-get install libglib2.0-0:i386 libgtk2.0-0:i386
+e. sudo apt --fix-broken install
+(above step should re-install previously failed citrix receiver)
+
+<below steps to avoid certificate errors>
+f. sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/
+g. sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
+
 4. How to enable Wifi after system suspend (16.04 bug)
 - sudo nano /lib/systemd/system-sleep/wififix
 -- Save below script in this file
