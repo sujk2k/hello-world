@@ -70,21 +70,21 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql
 
 -- 9a. Run sql docker image
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Sksksl12@' \
-   -p 1433:1433 --name budgiesql \
+   -p 1433:1433 --name ubuntusql \
    -d mcr.microsoft.com/mssql/server:2017-latest
 
    --a. check if image is running
    sudo docker ps -a
 
 -- 9b. Connect to sql from within docker image
-   --a. sudo docker exec -it budgiesql "bash"
+   --a. sudo docker exec -it ubuntusql "bash"
    --b. /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Sksksl12@'
 
 -- 9c. Connect to sql server from outside docker image
    sqlcmd -S 192.168.1.2,1433 -U SA -P 'Sksksl12@'
 
 -- 9d. Stop docker container (once stopped, all created data will vanish)
-   sudo docker stop budgiesql (replace stop with start to start sql server again)
+   sudo docker stop ubuntusql (replace stop with start to start sql server again)
 
 10. Grub customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
