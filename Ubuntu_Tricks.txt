@@ -90,3 +90,6 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
 sudo apt-get install grub-customizer
+
+11. Enable touchpad buttons in XFCE interface
+https://forums.linuxmint.com/viewtopic.php?t=272698
