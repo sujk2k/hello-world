@@ -85,3 +85,8 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql
 
 -- 9d. Stop docker container (once stopped, all created data will vanish)
    sudo docker stop budgiesql (replace stop with start to start sql server again)
+
+10. Grub customizer
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt-get update
+sudo apt-get install grub-customizer
