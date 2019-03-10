@@ -93,3 +93,6 @@ sudo apt-get install grub-customizer
 
 11. Enable touchpad buttons in XFCE interface
 https://forums.linuxmint.com/viewtopic.php?t=272698
+
+12.click to minimie in Ubuntu 18.04+
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
