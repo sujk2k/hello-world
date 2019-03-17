@@ -96,3 +96,6 @@ https://forums.linuxmint.com/viewtopic.php?t=272698
 
 12.click to minimie in Ubuntu 18.04+
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
+13. Creating Oracle user and unlock HR schema
+https://docs.oracle.com/cd/E17781_01/admin.112/e18585/toc.htm
