@@ -1,6 +1,7 @@
 package com.sujk2k.springmasterclass.firstSpringDemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 // By below annotation, we tell spring framework that below is bean we want spring to manage
@@ -13,7 +14,8 @@ public class BinarySearchImpl {
     // Example of auto-wiring by Name instead of autowiring by Type since @Primary tag is now removed from one of the
     // component
     @Autowired
-    SortAlgorithm bubbleSortAlgorithm;
+    @Qualifier("bubble")
+    SortAlgorithm sortAlgorithm;
 
     // Setter injection
     /*public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
@@ -30,8 +32,8 @@ public class BinarySearchImpl {
 
     public int binarySearch(int[] arrayToSort, int numberToSearch){
         // Sort array
-        int[] sortedNumbers = bubbleSortAlgorithm.sort(arrayToSort);
-        System.out.println(bubbleSortAlgorithm);
+        int[] sortedNumbers = sortAlgorithm.sort(arrayToSort);
+        System.out.println(sortAlgorithm);
 
         // Search array
 
