@@ -26,6 +26,9 @@ e. sudo apt --fix-broken install
 f. sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/
 g. sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
 
+h. to enable Alt Tab in Citrix RDP
+Edit the file /etc/icaclient/config/All_Regions.ini, and set the value TransparentKeyPassthrough=Remote.
+
 4. How to enable Wifi after system suspend (16.04 bug)
 - sudo nano /lib/systemd/system-sleep/wififix
 -- Save below script in this file
