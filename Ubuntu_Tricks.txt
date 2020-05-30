@@ -106,5 +106,6 @@ https://docs.oracle.com/cd/E17781_01/admin.112/e18585/toc.htm
 14. Windows like taskbar for Ubuntu 18.04
 https://www.fosslinux.com/3226/how-to-add-windows-like-taskbar-in-ubuntu-gnome-editions.htm
 
-15. Disable internal intel wifi adapter
+15. Disable and blacklist internal intel wifi adapter
 sudo modprobe -r iwlwifi
+sudo modprobe -b iwlwifi
