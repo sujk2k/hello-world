@@ -53,6 +53,11 @@ run in console: timedatectl set-local-rtc 1 --adjust-system-clock
 sudo modprobe -r iwlwifi
 OR to disable and blacklist permanently
 sudo modprobe -r iwlwifi; sudo modprobe -b iwlwifi
+OR to disable permenantly at Network manager level:
+    - update /etc/NetworkManager/NetworkManager.conf (with sudo)
+    - add MAC id of network interface under keyfile section and reboot 
+        [keyfile]
+        unmanaged-devices=mac:00:11:22:33:44:55;
 
 7. Install and configure JDK
 https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
