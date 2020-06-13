@@ -29,27 +29,11 @@ g. sudo c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
 h. to enable Alt Tab in Citrix RDP
 Edit the file /etc/icaclient/config/All_Regions.ini, and set the value TransparentKeyPassthrough=Remote.
 
-4. How to enable Wifi after system suspend (16.04 bug)
-- sudo nano /lib/systemd/system-sleep/wififix
--- Save below script in this file
--------------------
-#!/bin/sh
-
-set -e
-
-if [ "$2" = "suspend" ] || [ "$2" = "hybrid-sleep" ]; then
-    case "$1" in
-        pre) true ;;
-        post) sleep 1 && service network-manager restart ;;
-    esac
-fi
---------------------
-
-5. Linux+Windows dual boot time fix
+4. Linux+Windows dual boot time fix
 https://www.howtogeek.com/323390/how-to-fix-windows-and-linux-showing-different-times-when-dual-booting/
 run in console: timedatectl set-local-rtc 1 --adjust-system-clock
 
-6. Disable default intel wifi adapter
+5. Disable default intel wifi adapter
 sudo modprobe -r iwlwifi
 OR to disable and blacklist permanently
 sudo modprobe -r iwlwifi; sudo modprobe -b iwlwifi
@@ -59,15 +43,15 @@ OR to disable permenantly at Network manager level:
         [keyfile]
         unmanaged-devices=mac:00:11:22:33:44:55;
 
-7. Install and configure JDK
+6. Install and configure JDK
 https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
 
-8. Create shortcuts on Ubuntu desktop
+7. Create shortcuts on Ubuntu desktop
 https://askubuntu.com/questions/141229/how-to-add-a-shell-script-to-launcher-as-shortcut
 sudo apt-get install --no-install-recommends gnome-panel
 gnome-desktop-item-edit ~/Desktop/ --create-new
 
-9. Installing docker on ubuntu
+8. Installing docker on ubuntu
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
 -- installing ms sql server as docker on ubuntu
@@ -76,7 +60,7 @@ https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?vie
 -- installing sql server tools on ubuntu
 https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql-server-2017#ubuntu
 
--- 9a. Run sql docker image
+-- 8a. Run sql docker image
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Sksksl12@' \
    -p 1433:1433 --name ubuntusql \
    -d mcr.microsoft.com/mssql/server:2017-latest
@@ -84,29 +68,29 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-tools?view=sql
    --a. check if image is running
    sudo docker ps -a
 
--- 9b. Connect to sql from within docker image
+-- 8b. Connect to sql from within docker image
    --a. sudo docker exec -it ubuntusql "bash"
    --b. /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Sksksl12@'
 
--- 9c. Connect to sql server from outside docker image
+-- 8c. Connect to sql server from outside docker image
    sqlcmd -S 192.168.1.2,1433 -U SA -P 'Sksksl12@'
 
--- 9d. Stop docker container (once stopped, all created data will vanish)
+-- 8d. Stop docker container (once stopped, all created data will vanish)
    sudo docker stop ubuntusql (replace stop with start to start sql server again)
 
-10. Grub customizer
+9. Grub customizer
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
 sudo apt-get install grub-customizer
 
-11. Enable touchpad buttons in XFCE interface
+10. Enable touchpad buttons in XFCE interface
 https://forums.linuxmint.com/viewtopic.php?t=272698
 
-12.click to minimie in Ubuntu 18.04+
+11.click to minimie in Ubuntu 18.04+
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
-13. Creating Oracle user and unlock HR schema
+12. Creating Oracle user and unlock HR schema
 https://docs.oracle.com/cd/E17781_01/admin.112/e18585/toc.htm
 
-14. Windows like taskbar for Ubuntu 18.04
+13. Windows like taskbar for Ubuntu 18.04
 https://www.fosslinux.com/3226/how-to-add-windows-like-taskbar-in-ubuntu-gnome-editions.htm
